@@ -73,7 +73,7 @@ export default class TextureManager
 
         const isRenderTexture = !!texture._glRenderTargets;
 
-        if (!texture.hasLoaded)
+        if (!texture.hasLoaded || texture._destroyed)
         {
             return null;
         }
